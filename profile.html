@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dosti Business - Profile</title>
+    <link rel="icon" type="image/x-icon" href="fevion logo.jpg">
+    <link rel="stylesheet" href="profilestyle.css">
+</head>
+<body>
+    <div class="main">
+        <div class="background">
+            <div class="icon">
+                <h2 class="logo">d|b <span>dosti business</span></h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="profile.html">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a herf="#">MARKETING & SALES</a></li>
+                    <li><a href="business_form.html" class="get-prime">GET PRIME</a></li>
+                </ul>
+                <div class="profile-menu">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <div class="dropdown-content">
+                        <a href="#">My Profile</a>
+                        <a href="#">My Business</a>
+                        <a href="index.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-info">
+            <h2>Your Business Information</h2>
+            <!-- Add content or placeholders here -->
+            <p>Business information will be displayed here.</p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        document.querySelector('.profile-menu').addEventListener('click', function() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.profile-menu, .profile-menu *')) {
+                var dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function(dropdown) {
+                    dropdown.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
